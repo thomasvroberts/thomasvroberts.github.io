@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ============================================================
+     EDIT ME FIRST
+     1. Fill in real links marked  href="#REPLACE"  (email, LinkedIn,
+        SSRN, Scholar, X, the music link, and the CV / paper files).
+     2. Drop your resume in the same folder as cv.pdf (or change the link).
+     3. Add writing pieces: copy one <article class="piece"> block and
+        set its href to the Substack URL of the post.
+     ============================================================ -->
+
+<title>Thomas Villalobos Roberts — Political Economy &amp; Writing</title>
+<meta name="description" content="Research on institutional change, plus writing on markets, states, and economic policy." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#F5F4EF;
+    --paper-2:#EFEDE6;
+    --ink:#14181F;
+    --navy:#1B2A4A;
+    --slate:#5A6472;
+    --line:#DCDAD1;
+    --accent:#2E6B63;        /* muted teal — links, marks, ticks */
+    --accent-soft:#2e6b6318;
+
+    --serif:'Newsreader', Georgia, 'Times New Roman', serif;
+    --sans:'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+    --mono:'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+    --wrap:1080px;
+    --col:660px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+
+  ::selection{ background:var(--accent-soft); }
+
+  a{ color:inherit; text-decoration:none; }
+
+  .wrap{ max-width:var(--wrap); margin:0 auto; padding:0 32px; }
+
+  /* ---------- utility type ---------- */
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--accent);
+    display:inline-block;
+  }
+  .mono{ font-family:var(--mono); font-variant-numeric:tabular-nums; }
+
+  /* ---------- tick-ruler signature ---------- */
+  .ruler{
+    height:14px;
+    background-image:
+      repeating-linear-gradient(90deg,
+        var(--line) 0, var(--line) 1px,
+        transparent 1px, transparent 16px);
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+            mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+    opacity:.9;
+  }
+  .ruler--accent{
+    background-image:
+      repeating-linear-gradient(90deg,
+        var(--line) 0, var(--line) 1px,
+        transparent 1px, transparent 16px),
+      repeating-linear-gradient(90deg,
+        var(--accent) 0, var(--accent) 1px,
+        transparent 1px, transparent 80px);
+  }
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter:saturate(1.1) blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .bar{
+    display:flex; align-items:center; justify-content:space-between;
+    height:60px;
+  }
+  .wordmark{
+    font-family:var(--serif);
+    font-size:19px; font-weight:500;
+    letter-spacing:.01em;
+  }
+  .wordmark span{ color:var(--accent); }
+  nav ul{ display:flex; gap:26px; list-style:none; margin:0; padding:0; }
+  nav a{
+    font-family:var(--mono);
+    font-size:12.5px; letter-spacing:.06em;
+    color:var(--slate);
+    padding:4px 0;
+    border-bottom:1px solid transparent;
+    transition:color .18s ease, border-color .18s ease;
+  }
+  nav a:hover{ color:var(--ink); }
+  nav a.active{ color:var(--ink); border-color:var(--accent); }
+  @media (max-width:620px){
+    nav a{ font-size:11px; }
+    nav ul{ gap:16px; }
+    .wordmark{ font-size:17px; }
+    .wrap{ padding:0 22px; }
+  }
+
+  /* ---------- sections ---------- */
+  section{ padding:76px 0; border-bottom:1px solid var(--line); }
+  section:last-of-type{ border-bottom:none; }
+  @media (max-width:620px){ section{ padding:52px 0; } }
+
+  .sec-head{ margin-bottom:24px; }
+  .sec-head h2{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(26px,4.4vw,38px);
+    line-height:1.1;
+    margin:0;
+    letter-spacing:-.01em;
+  }
+  .sec-head p{ color:var(--slate); max-width:var(--col); margin:.9rem 0 0; }
+
+  /* ---------- hero ---------- */
+  .hero{ padding-top:84px; padding-bottom:64px; border-bottom:1px solid var(--line); }
+  .hero .eyebrow{ margin-bottom:26px; }
+  .hero h1{
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(27px,4.3vw,46px);
+    line-height:1.2;
+    letter-spacing:-.015em;
+    max-width:880px;
+    margin:0;
+  }
+  .hero .lede{
+    font-family:var(--serif);
+    font-size:clamp(20px,2.6vw,27px);
+    line-height:1.42;
+    font-weight:300;
+    max-width:760px;
+    margin:0;
+    color:var(--ink);
+  }
+  .hero .sub{
+    max-width:var(--col);
+    color:var(--slate);
+    margin:26px 0 0;
+  }
+  .hero-meta{
+    margin-top:40px;
+    display:flex; flex-wrap:wrap; gap:10px 28px;
+    font-family:var(--mono); font-size:12.5px;
+    color:var(--slate); letter-spacing:.04em;
+  }
+  .hero-meta span::before{ content:"↳ "; color:var(--accent); }
+
+  /* ---------- work ---------- */
+  .work-item{
+    padding:0;
+  }
+  .work-item h3{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:24px;
+    line-height:1.2;
+    margin:0 0 .5rem;
+  }
+  .work-item .flag{
+    font-family:var(--mono); font-size:11px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--accent);
+    display:block; margin-bottom:12px;
+  }
+  .work-item p{ margin:0 0 1rem; color:var(--slate); }
+  .work-item .body{ max-width:var(--col); }
+  .work-links{ display:flex; flex-wrap:wrap; gap:8px 20px; }
+  .work-links a{
+    font-family:var(--mono); font-size:12.5px;
+    color:var(--accent);
+    border-bottom:1px solid var(--accent-soft);
+    padding-bottom:1px;
+    transition:border-color .18s ease;
+  }
+  .work-links a:hover{ border-color:var(--accent); }
+  .work-stats{
+    align-self:start;
+    border-left:1px solid var(--line);
+    padding-left:24px;
+  }
+  .stat{ margin-bottom:18px; }
+  .stat:last-child{ margin-bottom:0; }
+  .stat .n{
+    font-family:var(--mono); font-variant-numeric:tabular-nums;
+    font-size:26px; color:var(--navy); display:block; line-height:1;
+  }
+  .stat .k{
+    font-family:var(--mono); font-size:11px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--slate); margin-top:6px; display:block;
+  }
+  @media (max-width:760px){
+    .work-item{ grid-template-columns:1fr; gap:22px; }
+    .work-stats{ border-left:none; border-top:1px solid var(--line); padding-left:0; padding-top:20px; display:flex; gap:36px; }
+    .stat{ margin-bottom:0; }
+  }
+
+  /* ---------- writing ---------- */
+  .piece{
+    display:grid;
+    grid-template-columns:120px minmax(0,1fr);
+    gap:32px;
+    padding:30px 0;
+    border-top:1px solid var(--line);
+    align-items:baseline;
+    transition:padding-left .2s ease;
+  }
+  .piece:first-of-type{ border-top:none; }
+  .piece:hover{ padding-left:8px; }
+  .piece .date{
+    font-family:var(--mono); font-variant-numeric:tabular-nums;
+    font-size:12.5px; color:var(--slate); letter-spacing:.03em;
+    padding-top:5px;
+  }
+  .piece h3{
+    font-family:var(--serif); font-weight:500;
+    font-size:23px; line-height:1.25; margin:0 0 .35rem;
+  }
+  .piece h3 a{ background-image:linear-gradient(var(--accent),var(--accent)); background-size:0 1px; background-repeat:no-repeat; background-position:0 100%; transition:background-size .25s ease; padding-bottom:2px; }
+  .piece:hover h3 a{ background-size:100% 1px; }
+  .piece .dek{ color:var(--slate); margin:0; max-width:var(--col); }
+  .piece .tag{
+    font-family:var(--mono); font-size:11px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--accent); margin-left:10px;
+  }
+  .draft{ color:var(--slate); }
+  .draft .tag{ color:var(--slate); }
+  @media (max-width:620px){
+    .piece{ grid-template-columns:1fr; gap:6px; }
+    .piece .date{ padding-top:0; }
+  }
+
+  /* ---------- about ---------- */
+  .about-grid{ display:grid; grid-template-columns:minmax(0,1fr) 260px; gap:48px; }
+  .about-grid .prose p{ font-family:var(--serif); font-size:19px; line-height:1.6; font-weight:300; margin:0 0 1.1em; max-width:var(--col); }
+  .about-grid .prose p:last-child{ margin-bottom:0; }
+  .about-side{ font-family:var(--mono); font-size:12.5px; color:var(--slate); border-left:1px solid var(--line); padding-left:24px; }
+  .about-side dt{ color:var(--accent); letter-spacing:.1em; text-transform:uppercase; font-size:10.5px; margin-bottom:4px; }
+  .about-side dd{ margin:0 0 20px; line-height:1.5; }
+  @media (max-width:760px){
+    .about-grid{ grid-template-columns:1fr; gap:32px; }
+    .about-side{ border-left:none; border-top:1px solid var(--line); padding-left:0; padding-top:24px; }
+  }
+
+  /* ---------- cv ---------- */
+  .cv-row{
+    display:grid; grid-template-columns:100px minmax(0,1fr);
+    gap:28px; padding:22px 0; border-top:1px solid var(--line);
+  }
+  .cv-row:first-of-type{ border-top:none; }
+  .cv-row .yr{ font-family:var(--mono); font-variant-numeric:tabular-nums; font-size:12.5px; color:var(--slate); padding-top:3px; }
+  .cv-row .role{ font-family:var(--serif); font-size:20px; font-weight:500; margin:0; }
+  .cv-row .org{ color:var(--slate); margin:.15rem 0 0; }
+  .cv-download{
+    display:inline-flex; align-items:center; gap:10px;
+    margin-top:40px;
+    font-family:var(--mono); font-size:13px; letter-spacing:.03em;
+    color:var(--paper); background:var(--navy);
+    padding:13px 22px;
+    transition:background .2s ease, transform .2s ease;
+  }
+  .cv-download:hover{ background:var(--accent); transform:translateY(-1px); }
+  @media (max-width:620px){ .cv-row{ grid-template-columns:1fr; gap:2px; } }
+
+  /* ---------- contact / footer ---------- */
+  #contact{ padding:60px 0 0; }
+  .contact-head h2{
+    font-family:var(--serif); font-weight:380;
+    font-size:clamp(30px,6vw,58px); line-height:1.05; margin:0;
+    letter-spacing:-.02em; max-width:800px;
+  }
+  .contact-mail{ color:var(--accent); }
+  .contact-mail:hover{ text-decoration:underline; text-underline-offset:5px; }
+  .contact-links{
+    margin-top:0; display:flex; flex-wrap:wrap; gap:14px 30px;
+    font-family:var(--mono); font-size:13px; letter-spacing:.04em;
+  }
+  .contact-links a{ color:var(--slate); border-bottom:1px solid var(--line); padding-bottom:2px; transition:color .18s, border-color .18s; }
+  .contact-links a:hover{ color:var(--ink); border-color:var(--accent); }
+  footer{ margin-top:52px; padding:26px 0 34px; border-top:1px solid var(--line); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; font-family:var(--mono); font-size:11.5px; color:var(--slate); letter-spacing:.05em; }
+
+  /* ---------- scroll reveal ---------- */
+  .reveal{ opacity:0; transform:translateY(14px); transition:opacity .7s ease, transform .7s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion:reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
+
+  :focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="wordmark" href="#top">Thomas Villalobos Roberts</a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero" id="top">
+  <div class="wrap">
+    <h1>I study how national institutions change, and I build the data to measure it — then write about what those measures actually say.</h1>
+    <p class="sub">Research Lead at the Karsh Institute of Democracy. My work turns messy institutional reality into numbers you can compare across countries and years; my writing tries to make those numbers mean something outside a spreadsheet.</p>
+  </div>
+</div>
+
+<!-- ============ WORK ============ -->
+<section id="research">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Research</h2>
+    </div>
+
+    <div class="work-item reveal">
+      <div class="body">
+        <h3>The Global Capitalism Index</h3>
+        <p>A quantitative framework measuring institutional change across eight subindices and 169 countries from 2008 to 2024. Built from 242 datasets through a two-stage adaptive PCA, so the weights come from the data rather than from a committee. The paper is heading to SSRN and the ISS 2026 conference in Strasbourg.</p>
+        <div class="work-links">
+          <a href="#REPLACE">Read the paper (SSRN) &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MORE PROJECTS (hidden for now). To show one, move it above this
+         comment's opening line so it's no longer inside the comment.
+    <div class="work-item reveal">
+      <div class="body">
+        <span class="flag">Research track</span>
+        <h3>Institutions &amp; Emerging-Market Risk</h3>
+        <p>What happens when you point an institutional-quality index at markets? Applied to emerging-market equities, institutional signals help predict forward drawdown. A walk-forward composite roughly doubles the out-of-sample predictive power of the aggregate index.</p>
+        <div class="work-links">
+          <a href="#REPLACE">Findings deck &rarr;</a>
+          <a href="#REPLACE">Method &amp; code &rarr;</a>
+        </div>
+      </div>
+      <div class="work-stats">
+        <div class="stat"><span class="n">+0.38</span><span class="k">signal IC</span></div>
+        <div class="stat"><span class="n">15 yr</span><span class="k">backtest</span></div>
+      </div>
+    </div>
+
+    <div class="work-item reveal">
+      <div class="body">
+        <span class="flag">Earlier</span>
+        <h3>Racial Equity in Retirement Security</h3>
+        <p>My MPP thesis at UVA, partnered with the Brookings Institution: who the U.S. retirement system quietly leaves behind, and where policy could close the gap.</p>
+        <div class="work-links">
+          <a href="#REPLACE">Read the thesis &rarr;</a>
+        </div>
+      </div>
+      <div class="work-stats">
+        <div class="stat"><span class="n">MPP</span><span class="k">UVA</span></div>
+        <div class="stat"><span class="n">Brookings</span><span class="k">partner</span></div>
+      </div>
+    </div>
+    -->
+  </div>
+</section>
+
+<!-- ============ WRITING ============ -->
+<section id="writing">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Writing</h2>
+    </div>
+
+    <!-- ADD A PIECE: copy one <article> block, change date / title / dek / link.
+         For a live link, set href to the published URL.
+         For something unpublished, keep class="piece draft" and the "Draft" tag. -->
+
+    <article class="piece reveal">
+      <div class="date">2026 &middot; Feb</div>
+      <div>
+        <h3><a href="#REPLACE">What an index can't see</a></h3>
+        <p class="dek">Every composite measure buys clarity by throwing information away. A short defense of building them anyway — and of saying out loud what got left on the floor.</p>
+      </div>
+    </article>
+
+    <article class="piece reveal">
+      <div class="date">2026 &middot; Jan</div>
+      <div>
+        <h3><a href="#REPLACE">The institutions premium</a></h3>
+        <p class="dek">Why "good governance" keeps showing up in asset prices, and why it's harder to trade on than the pitch decks suggest.</p>
+      </div>
+    </article>
+
+    <article class="piece draft reveal">
+      <div class="date">Draft</div>
+      <div>
+        <h3><a href="#REPLACE">Who the average hides</a></h3>
+        <p class="dek">On retirement security, national numbers, and the distributional story that the headline figure erases.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>About</h2>
+    </div>
+    <div class="about-grid reveal">
+      <div class="prose">
+        <p>I'm the Research Lead at the Karsh Institute of Democracy at the University of Virginia, where I built the Global Capitalism Index and lead its research program.</p>
+        <p>Before the academy I covered institutional clients at Goldman Sachs, which is where I learned to care about the gap between what a number claims and what it can actually support. I hold an MPP from UVA; my thesis, partnered with Brookings, was on racial equity in retirement security.</p>
+        <p>I care about measurement done honestly — indices that admit what they leave out, findings that report their null results, and writing that doesn't oversell either. If that's your kind of thing too, reach me at <a class="contact-mail" href="mailto:you@REPLACE.com">you@domain.com</a>.</p>
+        <p>Off the clock, I write and record as half of <a href="#REPLACE" style="color:var(--accent);border-bottom:1px solid var(--accent-soft);">Foreign Saints</a>, an indie-pop duo out of NYC. Our debut album is out now.</p>
+      </div>
+      <dl class="about-side">
+        <dt>Now</dt>
+        <dd>Research Lead, Karsh Institute of Democracy (UVA)</dd>
+        <dt>Focus</dt>
+        <dd>Institutional change, political economy, markets</dd>
+        <dt>Based</dt>
+        <dd>Brooklyn, NY</dd>
+        <dt>Tools</dt>
+        <dd>Python, R, LaTeX, a lot of footnotes</dd>
+      </dl>
+    </div>
+    <a class="cv-download reveal" href="cv.pdf" download>Download full CV (PDF) &darr;</a>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-links reveal">
+      <a href="#REPLACE">Substack</a>
+      <a href="#REPLACE">LinkedIn</a>
+      <a href="#REPLACE">Google Scholar</a>
+      <a href="#REPLACE">SSRN</a>
+    </div>
+    <footer>
+      <span>&copy; <span id="yr"></span> Thomas Villalobos Roberts</span>
+    </footer>
+  </div>
+</section>
+
+<script>
+  // current year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // scroll reveal
+  (function(){
+    var els = document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in');}); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold:0.12, rootMargin:'0px 0px -8% 0px' });
+    els.forEach(function(e){ io.observe(e); });
+  })();
+
+  // active nav link on scroll
+  (function(){
+    var links = Array.prototype.slice.call(document.querySelectorAll('nav a'));
+    var map = {};
+    links.forEach(function(a){ var id=a.getAttribute('href').slice(1); var s=document.getElementById(id); if(s) map[id]=a; });
+    var sections = Object.keys(map).map(function(id){ return document.getElementById(id); });
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          links.forEach(function(l){ l.classList.remove('active'); });
+          if(map[en.target.id]) map[en.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin:'-45% 0px -50% 0px' });
+    sections.forEach(function(s){ spy.observe(s); });
+  })();
+</script>
+</body>
+</html>
