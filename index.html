@@ -14,7 +14,7 @@
      ============================================================ -->
 
 <title>Thomas Villalobos Roberts</title>
-<meta name="description" content="Research and writings on democracy, capitalism and institutions." />
+<meta name="description" content="Research on democracy, capitalism and institutions." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -234,41 +234,6 @@
     .work-item{ grid-template-columns:1fr; gap:22px; }
     .work-stats{ border-left:none; border-top:1px solid var(--line); padding-left:0; padding-top:20px; display:flex; gap:36px; }
     .stat{ margin-bottom:0; }
-  }
-
-  /* ---------- writing ---------- */
-  .piece{
-    display:grid;
-    grid-template-columns:120px minmax(0,1fr);
-    gap:32px;
-    padding:30px 0;
-    border-top:1px solid var(--line);
-    align-items:baseline;
-    transition:padding-left .2s ease;
-  }
-  .piece:first-of-type{ border-top:none; }
-  .piece:hover{ padding-left:8px; }
-  .piece .date{
-    font-family:var(--mono); font-variant-numeric:tabular-nums;
-    font-size:12.5px; color:var(--slate); letter-spacing:.03em;
-    padding-top:5px;
-  }
-  .piece h3{
-    font-family:var(--serif); font-weight:500;
-    font-size:23px; line-height:1.25; margin:0 0 .35rem;
-  }
-  .piece h3 a{ background-image:linear-gradient(var(--accent),var(--accent)); background-size:0 1px; background-repeat:no-repeat; background-position:0 100%; transition:background-size .25s ease; padding-bottom:2px; }
-  .piece:hover h3 a{ background-size:100% 1px; }
-  .piece .dek{ color:var(--slate); margin:0; max-width:var(--col); }
-  .piece .tag{
-    font-family:var(--mono); font-size:11px; letter-spacing:.1em;
-    text-transform:uppercase; color:var(--accent); margin-left:10px;
-  }
-  .draft{ color:var(--slate); }
-  .draft .tag{ color:var(--slate); }
-  @media (max-width:620px){
-    .piece{ grid-template-columns:1fr; gap:6px; }
-    .piece .date{ padding-top:0; }
   }
 
   /* ---------- about ---------- */
